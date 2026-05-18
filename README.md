@@ -12,6 +12,7 @@
 ![ReportLab](https://img.shields.io/badge/Reports-PDF%20ReportLab-EC1C24?style=flat-square&logo=adobeacrobatreader&logoColor=white)
 ![Threading](https://img.shields.io/badge/Threading-Parallel%20Scanning-8B5CF6?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-0D1117?style=flat-square&logo=windows&logoColor=white)
+![CI](https://github.com/VladimirRamirez07/osint-security-scanner/actions/workflows/ci.yml/badge.svg)
 
 ---
 
@@ -59,6 +60,19 @@ Each scan generates a professional PDF report including:
 - Scan metadata footer
 
 > 📁 See example reports in [`/sample_reports`](./sample_reports/)
+
+---
+
+## 🧪 CI/CD
+
+This project uses **GitHub Actions** for continuous integration. Every push to `main` automatically:
+
+- ✅ Installs all dependencies
+- ✅ Runs the full unit test suite with `pytest`
+- ✅ Reports test coverage across `scanner/` and `report/`
+- ✅ Runs `flake8` lint checks
+
+> See [`.github/workflows/ci.yml`](.github/workflows/ci.yml) for the full pipeline configuration.
 
 ---
 
@@ -117,21 +131,45 @@ python main.py apple.com netflix.com google.com
 
 ---
 
+## 🧪 Running Tests
+
+```bash
+# Install test dependencies
+pip install pytest pytest-cov
+
+# Run all tests
+pytest tests/ -v
+
+# Run with coverage report
+pytest tests/ -v --cov=scanner --cov=report --cov-report=term-missing
+```
+
+---
+
 ## 🗂️ Project Structure
 
 ```
 osint-security-scanner/
 │
+├── .github/
+│   └── workflows/
+│       └── ci.yml                # GitHub Actions CI/CD pipeline
+│
 ├── scanner/
-│   ├── dns_checker.py        # SPF, DKIM, DMARC via dnspython
-│   ├── http_checker.py       # HTTP security headers analysis
-│   └── subdomain_checker.py  # Parallel subdomain + takeover detection
+│   ├── dns_checker.py            # SPF, DKIM, DMARC via dnspython
+│   ├── http_checker.py           # HTTP security headers analysis
+│   └── subdomain_checker.py      # Parallel subdomain + takeover detection
 │
 ├── report/
-│   └── pdf_generator.py      # Professional PDF reports with ReportLab
+│   └── pdf_generator.py          # Professional PDF reports with ReportLab
 │
-├── sample_reports/           # Generated PDF reports (examples)
-├── main.py                   # CLI entry point
+├── tests/
+│   ├── test_dns.py               # Unit tests for DNS module
+│   ├── test_http.py              # Unit tests for HTTP module
+│   └── test_subdomains.py        # Unit tests for subdomain module
+│
+├── sample_reports/               # Generated PDF reports (examples)
+├── main.py                       # CLI entry point
 └── requirements.txt
 ```
 
@@ -140,10 +178,13 @@ osint-security-scanner/
 ## 📦 Dependencies
 
 ```
-dnspython==2.6.1
-requests==2.31.0
-reportlab==4.1.0
+dnspython==2.7.0
+requests==2.32.3
+reportlab==4.4.1
 colorama==0.4.6
+urllib3==2.4.0
+pytest==8.3.5
+pytest-cov==6.1.0
 ```
 
 ---
