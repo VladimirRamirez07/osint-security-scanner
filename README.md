@@ -2,10 +2,16 @@
 
 > OSINT security analysis tool that audits the public infrastructure of any domain **without sending a single direct attack**. Automatically generates professional PDF reports with security scoring.
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
-![Legal](https://img.shields.io/badge/100%25-Legal-brightgreen?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)
+![Legal](https://img.shields.io/badge/100%25-Legal-22c55e?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)
+![DNS](https://img.shields.io/badge/DNS-SPF%20%7C%20DKIM%20%7C%20DMARC-58A6FF?style=flat-square)
+![Security](https://img.shields.io/badge/Security-HTTP%20Headers-F85149?style=flat-square&logo=hackthebox&logoColor=white)
+![OSINT](https://img.shields.io/badge/OSINT-Subdomain%20Takeover-D29922?style=flat-square)
+![ReportLab](https://img.shields.io/badge/Reports-PDF%20ReportLab-EC1C24?style=flat-square&logo=adobeacrobatreader&logoColor=white)
+![Threading](https://img.shields.io/badge/Threading-Parallel%20Scanning-8B5CF6?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-0D1117?style=flat-square&logo=windows&logoColor=white)
 
 ---
 
