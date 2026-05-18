@@ -1,8 +1,10 @@
 import requests
+import urllib3
 from dataclasses import dataclass, field
 from typing import Optional
 
-# Headers de seguridad que vamos a verificar
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 SECURITY_HEADERS = {
     "Strict-Transport-Security": {
         "description": "Fuerza HTTPS en el navegador (HSTS)",
@@ -75,6 +77,7 @@ def scan_http(domain: str) -> HTTPResult:
             url,
             timeout=10,
             allow_redirects=True,
+            verify=False,
             headers={"User-Agent": "Mozilla/5.0 (Security Scanner)"}
         )
 
@@ -86,7 +89,6 @@ def scan_http(domain: str) -> HTTPResult:
         if result.https_enabled:
             score += 10
 
-        # Verificar cada header de seguridad
         for header_name, meta in SECURITY_HEADERS.items():
             value = response.headers.get(header_name)
             header_result = HeaderResult(
