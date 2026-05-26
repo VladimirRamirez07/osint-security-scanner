@@ -12,6 +12,7 @@
 ![ReportLab](https://img.shields.io/badge/Reports-PDF%20ReportLab-EC1C24?style=flat-square&logo=adobeacrobatreader&logoColor=white)
 ![Threading](https://img.shields.io/badge/Threading-Parallel%20Scanning-8B5CF6?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-0D1117?style=flat-square&logo=windows&logoColor=white)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vladimir-ram%C3%ADrez-303a433ba)
 ![CI](https://github.com/VladimirRamirez07/osint-security-scanner/actions/workflows/ci.yml/badge.svg)
 
 ---
