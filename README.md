@@ -205,4 +205,4 @@ pytest-cov==6.1.0
 
 **Vladimir Ramirez** — [@VladimirRamirez07](https://github.com/VladimirRamirez07)
 
-> *Built as part of a cybersecurity portfolio to demonstrate real-world OSINT and security analysis skills.*
+> *Built as part of a cybersecurity portfolio to demonstrate real-world OSINT and security analysis skills*
