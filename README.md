@@ -47,7 +47,7 @@
 ### 🔎 Subdomain Enumeration
 - Checks **40 common subdomains** in parallel using `ThreadPoolExecutor`
 - Detects active subdomains with IP address and HTTP status
-- Identifies **Subdomain Takeover** vulnerabilities across services like GitHub Pages, Heroku, AWS S3, Netlify, and more.
+- Identifies **Subdomain Takeover** vulnerabilities across services like GitHub Pages, Heroku, AWS S3, Netlify, and more
 
 ---
 
